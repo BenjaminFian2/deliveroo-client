@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(process.env.REACT_APP_URL_API);
+        const response = await axios.get("https://benalgo-deliveroo-server.herokuapp.com/");
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
