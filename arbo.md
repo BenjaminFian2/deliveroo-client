@@ -1,0 +1,30 @@
+- restaurant (obj)
+  - path (str)
+  - name (str) => Header
+  - categories (tab-str)
+  - price (str)
+  - phone (str)
+  - percentage (num)
+  - ratings (str)
+  - adress (str)
+  - delay (str)
+  - description (str) => Header
+  - picture (str) => Header
+  - client_adress (obj)
+    - coordinates (tab-num)
+    - locality (str)
+    - country (str)
+    - formatted_adress (str)
+    - post_code (str)
+    - route (str)
+    - street_number (str)
+    - city (str)
+- categories (tab-obj)
+  - name (str) => Meals
+  - meals (tab-obj) => Meals
+    - id (str) : key => Meal
+    - title (str) => Meal
+    - description (str) => Meal
+    - price (str) => Meal
+    - picture (str) => Meal
+    - popular (bool) => Meal
