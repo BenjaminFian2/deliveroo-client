@@ -37,18 +37,20 @@ function App() {
         picture={data.restaurant.picture}
       />
       <main className="center">
-        <section className="Categories">
+        <div className="Categories">
           {data.categories.map((elem, index) => {
             return (
-              <Meals
-                key={index}
-                name={elem.name}
-                meals={elem.meals}
-                currency={data.restaurant.price}
-              />
+              elem.meals.length > 0 && (
+                <Meals
+                  key={index}
+                  name={elem.name}
+                  meals={elem.meals}
+                  currency={data.restaurant.price}
+                />
+              )
             );
           })}
-        </section>
+        </div>
         <section className="boxBasket">
           <Basket />
         </section>
