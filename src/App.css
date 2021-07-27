@@ -628,6 +628,7 @@ main {
   }
 
   .articles {
+    width: 290px;
     font-size: 12px;
   }
 
