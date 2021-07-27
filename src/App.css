@@ -28,6 +28,8 @@
 .center {
   margin: 0 auto;
   max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
   /* padding: 0 30px; */
 }
 
@@ -160,7 +162,7 @@ main {
   /* display: flex;
   align-items: center; */
   color: #ff8000;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   margin-left: 16px;
 }
@@ -188,7 +190,7 @@ main {
 /*Cart*/
 .boxCart {
   width: 350px;
-  max-height: 800px; /*je suis obligé d'assigner une hauteur sinon le stycky ne marche pas*/
+  /* max-height: 800px;  */
   position: sticky;
   top: 0;
 }
