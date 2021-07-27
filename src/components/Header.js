@@ -1,11 +1,15 @@
 import logo from "../assets/img/logo.svg";
 
+//import of font awesome library
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Header = ({ name, description, picture }) => {
   return (
     <div className="Header">
       <div className="hr">
         <header className="boxLogo center">
           <img src={logo} alt="logo" className="logo" />
+          <FontAwesomeIcon icon="shopping-cart" className="cartLogo" />
         </header>
       </div>
       <section className="boxRestaurant center">
@@ -18,7 +22,6 @@ const Header = ({ name, description, picture }) => {
           alt="accueil restaurant"
           className="restaurantImage"
         />
-        <article></article>
       </section>
     </div>
   );

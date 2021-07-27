@@ -9,6 +9,11 @@ import Footer from "./components/Footer";
 
 import { useState, useEffect } from "react";
 
+// import and add font awesome icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+library.add(faShoppingCart);
+
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);

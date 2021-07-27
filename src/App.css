@@ -68,6 +68,11 @@ header {
 
 .logo {
   height: 42px;
+  margin: 9px;
+}
+
+.cartLogo {
+  display: none;
 }
 
 .boxRestaurant {
@@ -190,7 +195,6 @@ main {
 /*Cart*/
 .boxCart {
   width: 350px;
-  /* max-height: 800px;  */
   position: sticky;
   top: 0;
 }
@@ -264,8 +268,287 @@ main {
 /*RESPONSIVE*/
 
 /*Tablette*/
-@media (max-width: 1080px) AND (min-width: 768px) {
+@media (max-width: 1240px) AND (min-width: 768px) {
+  /*Global*/
+  .center {
+    max-width: 1240px;
+    margin: 0 30px;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 10px 0 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  /*Header*/
+  .boxRestaurant {
+    padding: 20px 0;
+  }
+
+  .restaurantIntro {
+    margin-right: 15px;
+  }
+
+  .restaurantIntro > p {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-top: 18px;
+  }
+
+  .restaurantImage {
+    width: 300px;
+  }
+
+  /*main*/
+  main {
+    max-width: 1240px;
+  }
+  /*Categories*/
+  .Categories {
+    margin-right: 15px;
+  }
+
+  /*Meals*/
+  .Meals {
+    margin: 0 -10px;
+  }
+  /*Meal*/
+  .Meal {
+    width: 50%;
+    min-width: 231px;
+    padding: 0 5px 10px;
+  }
+
+  .card {
+    height: 175px;
+    padding: 5px;
+  }
+
+  .menu {
+    margin-right: 15px;
+  }
+
+  .menu p {
+    font-size: 12px;
+    line-height: 1;
+    height: 85px;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 10px;
+  }
+
+  .popularity {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+
+  .popularity img {
+    height: 10px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+  }
+
+  .menuImage {
+    height: 100px;
+    width: 100px;
+  }
+
+  /*Cart*/
+  .boxCart {
+    width: 250px;
+  }
+
+  .Cart {
+    box-shadow: 0 22px 24px 0 rgb(46 51 51 / 7%);
+    margin: 15px 0;
+  }
+
+  .cart {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .empty {
+    padding: 20px 0;
+  }
+
+  /*Articles*/
+  .Articles {
+    font-size: 12px;
+  }
+
+  /*Footer*/
+  .Footer {
+    padding-top: 20px;
+    margin-top: 15px;
+  }
+
+  .Footer p {
+    font-size: 18px;
+  }
 }
 /*Smartphone*/
 @media (max-width: 767px) AND (min-width: 320px) {
+  /*Global*/
+  .center {
+    max-width: 767px; /**/
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 10px 0 0px;
+    text-align: center; /**/
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  /*Header*/
+
+  .boxLogo {
+    justify-content: space-between;
+  }
+
+  .cartLogo {
+    display: inherit;
+    font-size: 30px;
+    margin: 15px 9px 15px;
+    color: #00cdbd;
+  }
+
+  .boxRestaurant {
+    padding: 0 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurantIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurantIntro > p {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .restaurantImage {
+    width: 300px;
+  }
+
+  /*main*/
+  main {
+    max-width: 767px;
+  }
+  /*Categories*/
+  .Categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+  }
+
+  /*Meals*/
+  .Meals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 -10px;
+  }
+  /*Meal*/
+  .Meal {
+    width: 300px;
+    margin: 0;
+    padding: 0 5px 10px;
+  }
+
+  .card {
+    height: 175px;
+    padding: 5px;
+  }
+
+  .menu {
+    margin-right: 15px;
+  }
+
+  .menu p {
+    font-size: 12px;
+    line-height: 1;
+    height: 85px;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 10px;
+  }
+
+  .popularity {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+
+  .popularity img {
+    height: 10px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+  }
+
+  .menuImage {
+    height: 100px;
+    width: 100px;
+  }
+
+  /*Cart*/
+  .boxCart {
+    display: none;
+  }
+
+  .cart {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .empty {
+    padding: 20px 0;
+  }
+
+  /*Articles*/
+  .Articles {
+    font-size: 12px;
+  }
+
+  /*Footer*/
+  .Footer {
+    padding-top: 20px;
+    margin-top: 15px;
+  }
+
+  .Footer p {
+    font-size: 14px;
+  }
 }
