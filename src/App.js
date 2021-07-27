@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Meals from "./components/Meals";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 import { useState, useEffect } from "react";
 
@@ -17,6 +18,7 @@ library.add(faShoppingCart);
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [activeModal, setActiveModal] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +34,8 @@ function App() {
     // return
   }, []);
 
+  console.log(data);
+
   return isLoading ? (
     <span>En cours de chargement...</span>
   ) : (
@@ -40,6 +44,8 @@ function App() {
         name={data.restaurant.name}
         description={data.restaurant.description}
         picture={data.restaurant.picture}
+        data={data}
+        setActiveModal={setActiveModal}
       />
       <main className="center">
         <div className="Categories">
@@ -51,16 +57,26 @@ function App() {
                   name={elem.name}
                   meals={elem.meals}
                   currency={data.restaurant.price}
+                  data={data}
+                  setData={setData}
                 />
               )
             );
           })}
         </div>
         <section className="boxCart">
-          <Cart />
+          <Cart
+            cart={data.cart}
+            currency={data.restaurant.price}
+            data={data}
+            setData={setData}
+          />
         </section>
       </main>
       <Footer />
+      {activeModal && (
+        <Modal data={data} setData={setData} setActiveModal={setActiveModal} />
+      )}
     </div>
   );
 }

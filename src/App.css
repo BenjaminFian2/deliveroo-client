@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 320px;
+}
+
 .App {
   font-family: "helvetica";
   display: flex;
@@ -237,13 +241,92 @@ main {
   cursor: pointer;
 }
 
-/*Articles*/
 .empty {
   color: #868a8a;
   text-align: center;
   padding: 48px 0;
 }
 
+.fill {
+  border-bottom: 1px solid #d1d7d7;
+  margin: 0 10px;
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+}
+
+/*Article*/
+.Article {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #808484;
+}
+
+.minus,
+.plus {
+  height: 20px;
+}
+
+.minus:hover,
+.plus:hover {
+  cursor: pointer;
+}
+
+.count {
+  min-width: 1rem;
+  text-align: center;
+}
+
+.articleName {
+  flex: 1 1;
+}
+
+.articlePrice {
+  width: 85px;
+  text-align: right;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.billDetails {
+  margin: 0 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #d1d7d7;
+}
+
+.bill,
+.deliveryFee {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.billName,
+.deliveryFeeName,
+.totalName {
+  flex: 1 1;
+}
+
+.billPrice,
+.totalPrice {
+  width: 85px;
+  text-align: right;
+}
+
+.total {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.3rem 0;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 /*Footer*/
 .Footer {
   background-color: white;
@@ -263,6 +346,10 @@ main {
 .Footer p {
   font-size: 25px;
   margin-left: 0;
+}
+
+.modalBackground {
+  display: none;
 }
 
 /*RESPONSIVE*/
@@ -385,8 +472,7 @@ main {
     padding: 20px 0;
   }
 
-  /*Articles*/
-  .Articles {
+  .articles {
     font-size: 12px;
   }
 
@@ -401,7 +487,7 @@ main {
   }
 }
 /*Smartphone*/
-@media (max-width: 767px) AND (min-width: 320px) {
+@media (max-width: 767px) {
   /*Global*/
   .center {
     max-width: 767px; /**/
@@ -528,6 +614,10 @@ main {
     display: none;
   }
 
+  .Cart {
+    margin: 0 0;
+  }
+
   .cart {
     margin: 10px;
     font-size: 14px;
@@ -537,9 +627,16 @@ main {
     padding: 20px 0;
   }
 
-  /*Articles*/
-  .Articles {
+  .articles {
     font-size: 12px;
+  }
+
+  .fill {
+    max-height: 260px;
+  }
+
+  .total {
+    padding: 10px;
   }
 
   /*Footer*/
@@ -550,5 +647,45 @@ main {
 
   .Footer p {
     font-size: 14px;
+  }
+
+  /*Modal*/
+
+  .modalBackground {
+    display: inherit;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalContainer {
+    width: 300px;
+    height: 500px;
+    border-radius: 12px;
+    background-color: #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .boxClose-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .close-btn {
+    color: darkgray;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .close-btn:hover {
+    cursor: pointer;
+    color: #333333;
   }
 }

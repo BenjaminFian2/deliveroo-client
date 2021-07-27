@@ -3,13 +3,19 @@ import logo from "../assets/img/logo.svg";
 //import of font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Header = ({ name, description, picture }) => {
+const Header = ({ name, description, picture, setActiveModal }) => {
   return (
     <div className="Header">
       <div className="hr">
         <header className="boxLogo center">
           <img src={logo} alt="logo" className="logo" />
-          <FontAwesomeIcon icon="shopping-cart" className="cartLogo" />
+          <FontAwesomeIcon
+            icon="shopping-cart"
+            className="cartLogo"
+            onClick={() => {
+              setActiveModal(true);
+            }}
+          />
         </header>
       </div>
       <section className="boxRestaurant center">

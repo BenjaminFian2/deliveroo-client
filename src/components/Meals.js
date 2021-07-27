@@ -1,6 +1,6 @@
 import Meal from "./Meal";
 
-const Meals = ({ name, meals, currency }) => {
+const Meals = ({ name, meals, currency, data, setData }) => {
   return (
     <>
       <h2>{name}</h2>
@@ -15,6 +15,8 @@ const Meals = ({ name, meals, currency }) => {
               picture={elem.picture}
               popular={elem.popular}
               currency={currency}
+              data={data}
+              setData={setData}
             />
           );
         })}

@@ -68,3 +68,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 v2 -> add responsive for ipad and smartphone
+
+v3 -> add cart for computers and ipads and a cart modal for smartphones
