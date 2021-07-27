@@ -4,7 +4,7 @@ import axios from "axios";
 //Components
 import Header from "./components/Header";
 import Meals from "./components/Meals";
-import Basket from "./components/Basket";
+import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 
 import { useState, useEffect } from "react";
@@ -51,8 +51,8 @@ function App() {
             );
           })}
         </div>
-        <section className="boxBasket">
-          <Basket />
+        <section className="boxCart">
+          <Cart />
         </section>
       </main>
       <Footer />

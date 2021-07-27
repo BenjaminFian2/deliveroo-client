@@ -185,15 +185,15 @@ main {
   object-fit: cover;
 }
 
-/*Basket*/
-.boxBasket {
+/*Cart*/
+.boxCart {
   width: 350px;
   max-height: 800px; /*je suis obligé d'assigner une hauteur sinon le stycky ne marche pas*/
   position: sticky;
   top: 0;
 }
 
-.Basket {
+.Cart {
   box-shadow: 0 22px 24px 0 rgb(46 51 51 / 7%);
   background: white;
   border-radius: 4px;
@@ -204,7 +204,7 @@ main {
   margin: 30px 0;
 }
 
-.basket {
+.cart {
   margin: 10px;
   border-radius: 5px;
   padding: 1rem;
