@@ -616,6 +616,7 @@ main {
 
   .Cart {
     margin: 0 0;
+    width: 290px;
   }
 
   .cart {
@@ -632,6 +633,7 @@ main {
   }
 
   .fill {
+    width: 270px;
     max-height: 260px;
   }
 
